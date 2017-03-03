@@ -9,11 +9,13 @@
 import UIKit
 import Cartography
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
     
     let loginView = LoginView()
+    let authenticationManager: AuthenticationManager
     
-    init() {
+    init(authenticationManager: AuthenticationManager) {
+        self.authenticationManager = authenticationManager
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -51,7 +53,14 @@ class ViewController: UIViewController {
         self.view.backgroundColor = .white
         
         loginView.tapLoginButton = { username, password in
-            
+            self.authenticationManager.authenticate(username: username, password: password, completion: { (result) in
+                switch result {
+                case .success(_):
+                    break
+                case .error:
+                    break
+                }
+            })
         }
     }
 }

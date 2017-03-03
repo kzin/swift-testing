@@ -15,22 +15,31 @@ import Nimble_Snapshots
 
 class ViewControllerTests: QuickSpec {
     
-    var viewController: ViewController!
+    var viewController: LoginViewController!
     
     func showViewController() {
         UIApplication.shared.keyWindow?.rootViewController = viewController
     }
     
     override func spec() {
-        describe("ViewController") {
+        describe("LoginViewController") {
+            
+            var authenticationManager: AuthenticationManagerMock!
             
             beforeEach {
-                self.viewController = ViewController()
+                authenticationManager = AuthenticationManagerMock()
+                
+                self.viewController = LoginViewController(authenticationManager: authenticationManager)
                 self.showViewController()
             }
             
             it("should have a cool layout") {
                 expect(self.viewController.view).toEventually(haveValidSnapshot())
+            }
+            
+            it("should call login request on loginButton tap") {
+                self.viewController.loginView.loginButton.sendActions(for: .touchUpInside)
+                expect(authenticationManager.authenticateWasCalled).to(beTrue())
             }
         }
     }

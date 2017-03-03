@@ -10,14 +10,17 @@
 		0AC7840DD8CA61642FC85BF7 /* Pods_swift_testing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 254C7A8F5683B5109A11F1DC /* Pods_swift_testing.framework */; };
 		5571723736CB37B80A00AB4E /* Pods_swift_testing_swift_testing_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750F4AE7519A59264E64B5F7 /* Pods_swift_testing_swift_testing_Tests.framework */; };
 		BA13AA4A1E6A054C002663B1 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA13AA491E6A054C002663B1 /* UserTests.swift */; };
+		BA13AA531E6A0DA3002663B1 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA13AA521E6A0DA3002663B1 /* AuthenticationManager.swift */; };
+		BA13AA551E6A0E38002663B1 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA13AA541E6A0E38002663B1 /* JSON.swift */; };
+		BA13AA581E6A0FC1002663B1 /* AuthenticationManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA13AA571E6A0FC1002663B1 /* AuthenticationManagerMock.swift */; };
 		BAE46CFF1E69D26600EFA3B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE46CFE1E69D26600EFA3B4 /* AppDelegate.swift */; };
-		BAE46D011E69D26600EFA3B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE46D001E69D26600EFA3B4 /* ViewController.swift */; };
+		BAE46D011E69D26600EFA3B4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE46D001E69D26600EFA3B4 /* LoginViewController.swift */; };
 		BAE46D061E69D26600EFA3B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAE46D051E69D26600EFA3B4 /* Assets.xcassets */; };
 		BAE46D211E69DE7100EFA3B4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE46D201E69DE7100EFA3B4 /* LoginView.swift */; };
 		BAE46D3E1E69EBF700EFA3B4 /* LoginViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE46D3D1E69EBF700EFA3B4 /* LoginViewTests.swift */; };
 		BAE46D411E69EE1F00EFA3B4 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE46D401E69EE1F00EFA3B4 /* UITextField+Extension.swift */; };
 		BAE46D431E69F26200EFA3B4 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE46D421E69F26200EFA3B4 /* UITextField+Extension.swift */; };
-		BAE46D461E69F4A700EFA3B4 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE46D451E69F4A700EFA3B4 /* ViewControllerTests.swift */; };
+		BAE46D461E69F4A700EFA3B4 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE46D451E69F4A700EFA3B4 /* LoginViewControllerTests.swift */; };
 		BAE46D491E69FC3700EFA3B4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE46D481E69FC3700EFA3B4 /* User.swift */; };
 		BAE46D4B1E69FCD100EFA3B4 /* Access.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE46D4A1E69FCD100EFA3B4 /* Access.swift */; };
 		BAE46D4E1E6A01FA00EFA3B4 /* AccessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE46D4D1E6A01FA00EFA3B4 /* AccessTests.swift */; };
@@ -44,9 +47,12 @@
 		A8B7382856C9AC88C02C216D /* Pods-swift-testing-swift-testing Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-testing-swift-testing Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swift-testing-swift-testing Tests/Pods-swift-testing-swift-testing Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B38AF7057D3CFD4215EDA27E /* Pods-swift-testing-swift-testing Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-testing-swift-testing Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-swift-testing-swift-testing Tests/Pods-swift-testing-swift-testing Tests.release.xcconfig"; sourceTree = "<group>"; };
 		BA13AA491E6A054C002663B1 /* UserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
+		BA13AA521E6A0DA3002663B1 /* AuthenticationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		BA13AA541E6A0E38002663B1 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		BA13AA571E6A0FC1002663B1 /* AuthenticationManagerMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationManagerMock.swift; sourceTree = "<group>"; };
 		BAE46CFB1E69D26600EFA3B4 /* swift-testing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-testing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE46CFE1E69D26600EFA3B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BAE46D001E69D26600EFA3B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BAE46D001E69D26600EFA3B4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BAE46D051E69D26600EFA3B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAE46D0A1E69D26600EFA3B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAE46D201E69DE7100EFA3B4 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -55,7 +61,7 @@
 		BAE46D3D1E69EBF700EFA3B4 /* LoginViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewTests.swift; sourceTree = "<group>"; };
 		BAE46D401E69EE1F00EFA3B4 /* UITextField+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		BAE46D421E69F26200EFA3B4 /* UITextField+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
-		BAE46D451E69F4A700EFA3B4 /* ViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
+		BAE46D451E69F4A700EFA3B4 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
 		BAE46D481E69FC3700EFA3B4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BAE46D4A1E69FCD100EFA3B4 /* Access.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Access.swift; sourceTree = "<group>"; };
 		BAE46D4D1E6A01FA00EFA3B4 /* AccessTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessTests.swift; sourceTree = "<group>"; };
@@ -104,6 +110,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BA13AA511E6A0D94002663B1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BA13AA521E6A0DA3002663B1 /* AuthenticationManager.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		BA13AA561E6A0FB3002663B1 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				BA13AA571E6A0FC1002663B1 /* AuthenticationManagerMock.swift */,
+			);
+			name = Mock;
+			sourceTree = "<group>";
+		};
 		BAE46CF21E69D26600EFA3B4 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +149,7 @@
 		BAE46CFD1E69D26600EFA3B4 /* swift-testing */ = {
 			isa = PBXGroup;
 			children = (
+				BA13AA511E6A0D94002663B1 /* Network */,
 				BAE46D471E69FC2800EFA3B4 /* Model */,
 				BAE46D1F1E69DDC000EFA3B4 /* Viewcontroller */,
 				BAE46D1E1E69DDB700EFA3B4 /* View */,
@@ -149,7 +172,7 @@
 		BAE46D1F1E69DDC000EFA3B4 /* Viewcontroller */ = {
 			isa = PBXGroup;
 			children = (
-				BAE46D001E69D26600EFA3B4 /* ViewController.swift */,
+				BAE46D001E69D26600EFA3B4 /* LoginViewController.swift */,
 			);
 			name = Viewcontroller;
 			sourceTree = "<group>";
@@ -157,6 +180,7 @@
 		BAE46D341E69EBD600EFA3B4 /* swift-testing Tests */ = {
 			isa = PBXGroup;
 			children = (
+				BA13AA561E6A0FB3002663B1 /* Mock */,
 				BAE46D4C1E6A01ED00EFA3B4 /* Model */,
 				BAE46D441E69F49500EFA3B4 /* Viewcontroller */,
 				BAE46D3F1E69EC3D00EFA3B4 /* View */,
@@ -177,7 +201,7 @@
 		BAE46D441E69F49500EFA3B4 /* Viewcontroller */ = {
 			isa = PBXGroup;
 			children = (
-				BAE46D451E69F4A700EFA3B4 /* ViewControllerTests.swift */,
+				BAE46D451E69F4A700EFA3B4 /* LoginViewControllerTests.swift */,
 			);
 			name = Viewcontroller;
 			sourceTree = "<group>";
@@ -187,6 +211,7 @@
 			children = (
 				BAE46D481E69FC3700EFA3B4 /* User.swift */,
 				BAE46D4A1E69FCD100EFA3B4 /* Access.swift */,
+				BA13AA541E6A0E38002663B1 /* JSON.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -404,9 +429,11 @@
 				BAE46D211E69DE7100EFA3B4 /* LoginView.swift in Sources */,
 				BAE46D4B1E69FCD100EFA3B4 /* Access.swift in Sources */,
 				BAE46D411E69EE1F00EFA3B4 /* UITextField+Extension.swift in Sources */,
-				BAE46D011E69D26600EFA3B4 /* ViewController.swift in Sources */,
+				BA13AA551E6A0E38002663B1 /* JSON.swift in Sources */,
+				BAE46D011E69D26600EFA3B4 /* LoginViewController.swift in Sources */,
 				BAE46D491E69FC3700EFA3B4 /* User.swift in Sources */,
 				BAE46CFF1E69D26600EFA3B4 /* AppDelegate.swift in Sources */,
+				BA13AA531E6A0DA3002663B1 /* AuthenticationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,11 +441,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAE46D461E69F4A700EFA3B4 /* ViewControllerTests.swift in Sources */,
+				BAE46D461E69F4A700EFA3B4 /* LoginViewControllerTests.swift in Sources */,
 				BAE46D4E1E6A01FA00EFA3B4 /* AccessTests.swift in Sources */,
 				BA13AA4A1E6A054C002663B1 /* UserTests.swift in Sources */,
 				BAE46D3E1E69EBF700EFA3B4 /* LoginViewTests.swift in Sources */,
 				BAE46D431E69F26200EFA3B4 /* UITextField+Extension.swift in Sources */,
+				BA13AA581E6A0FC1002663B1 /* AuthenticationManagerMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
