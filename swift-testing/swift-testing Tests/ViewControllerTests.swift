@@ -10,21 +10,15 @@ import Foundation
 import Nimble
 import Quick
 import Nimble_Snapshots
-import KIF
-import KIF_Quick
 
 @testable import swift_testing
 
-class ViewControllerTests: KIFSpec {
+class ViewControllerTests: QuickSpec {
     
     var viewController: ViewController!
     
     func showViewController() {
         UIApplication.shared.keyWindow?.rootViewController = viewController
-    }
-    
-    func usernameTextField() -> KIFUIViewTestActor {
-        return viewTester().usingLabel("Username")
     }
     
     override func spec() {
