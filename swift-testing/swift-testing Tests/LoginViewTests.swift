@@ -48,6 +48,18 @@ class LoginViewTests: QuickSpec {
                 
                 expect(view) == snapshot()
             }
+            
+            it("should call tapLoginButton block when user tap loginButton") {
+                var loginTapWasCalled = false
+                
+                view.tapLoginButton = { _, _ in
+                    loginTapWasCalled = true
+                }
+                
+                view.loginButton.sendActions(for: .touchUpInside)
+                
+                expect(loginTapWasCalled) == true
+            }
         }
     }
 }
