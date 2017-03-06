@@ -23,7 +23,7 @@ class RealAuthenticationManager: AuthenticationManager {
     func authenticate(username: String,
                       password: String,
                       completion:@escaping (Result<JsonObject>) -> Void){
-        if username == "username" || password == "password" {
+        if username == "username" && password == "password" {
             completion(.success(JSON.user()))
         } else {
             completion(.error)
