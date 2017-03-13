@@ -13,7 +13,7 @@
 		BA13AA531E6A0DA3002663B1 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA13AA521E6A0DA3002663B1 /* AuthenticationManager.swift */; };
 		BA13AA551E6A0E38002663B1 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA13AA541E6A0E38002663B1 /* JSON.swift */; };
 		BA13AA581E6A0FC1002663B1 /* AuthenticationManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA13AA571E6A0FC1002663B1 /* AuthenticationManagerMock.swift */; };
-		BAB28AA11E76D1CD00A2B465 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB28AA01E76D1CD00A2B465 /* NetworkRequest.swift */; };
+		BAB28AA11E76D1CD00A2B465 /* NetworkRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB28AA01E76D1CD00A2B465 /* NetworkRequestTest.swift */; };
 		BAB28AA31E76D20F00A2B465 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB28AA21E76D20F00A2B465 /* NetworkRequest.swift */; };
 		BAC4C9421E6DB00100D43FC9 /* LoginViewXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAC4C9411E6DB00100D43FC9 /* LoginViewXib.xib */; };
 		BAC4C9441E6DB06500D43FC9 /* LoginViewXibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC4C9431E6DB06500D43FC9 /* LoginViewXibTests.swift */; };
@@ -55,7 +55,7 @@
 		BA13AA521E6A0DA3002663B1 /* AuthenticationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		BA13AA541E6A0E38002663B1 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		BA13AA571E6A0FC1002663B1 /* AuthenticationManagerMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationManagerMock.swift; sourceTree = "<group>"; };
-		BAB28AA01E76D1CD00A2B465 /* NetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		BAB28AA01E76D1CD00A2B465 /* NetworkRequestTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequestTest.swift; sourceTree = "<group>"; };
 		BAB28AA21E76D20F00A2B465 /* NetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		BAC4C9411E6DB00100D43FC9 /* LoginViewXib.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewXib.xib; sourceTree = "<group>"; };
 		BAC4C9431E6DB06500D43FC9 /* LoginViewXibTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewXibTests.swift; sourceTree = "<group>"; };
@@ -193,7 +193,7 @@
 		BAE46D341E69EBD600EFA3B4 /* swift-testing Tests */ = {
 			isa = PBXGroup;
 			children = (
-				BAB28AA01E76D1CD00A2B465 /* NetworkRequest.swift */,
+				BAB28AA01E76D1CD00A2B465 /* NetworkRequestTest.swift */,
 				BA13AA561E6A0FB3002663B1 /* Mock */,
 				BAE46D4C1E6A01ED00EFA3B4 /* Model */,
 				BAE46D441E69F49500EFA3B4 /* Viewcontroller */,
@@ -461,7 +461,7 @@
 			files = (
 				BAE46D461E69F4A700EFA3B4 /* LoginViewControllerTests.swift in Sources */,
 				BAE46D4E1E6A01FA00EFA3B4 /* AccessTests.swift in Sources */,
-				BAB28AA11E76D1CD00A2B465 /* NetworkRequest.swift in Sources */,
+				BAB28AA11E76D1CD00A2B465 /* NetworkRequestTest.swift in Sources */,
 				BA13AA4A1E6A054C002663B1 /* UserTests.swift in Sources */,
 				BAC4C9441E6DB06500D43FC9 /* LoginViewXibTests.swift in Sources */,
 				BAE46D3E1E69EBF700EFA3B4 /* LoginViewTests.swift in Sources */,

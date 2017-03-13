@@ -118,13 +118,12 @@ class NetworkRequestTests: QuickSpec {
                     
                     var correctUrl = false
                     
-                    self.stub(
-                        {
-                            (request: URLRequest) -> Bool in
-                            correctUrl = request.url!.absoluteString == "http://www.google.com?name=Testing&project=Swift"
-                            return true
+                    let matcher = { (request: URLRequest) -> Bool in
+                        correctUrl = request.url!.absoluteString == "http://www.google.com?name=Testing&project=Swift"
+                        return true
                     }
-                        , json(object))
+                    
+                    self.stub(matcher, json(object))
                     
                     
                     networkService.request(URL(string: "http://www.google.com")!, method: .get, parameters: parameters, headers: nil, completion: { (result) in
@@ -140,8 +139,8 @@ class NetworkRequestTests: QuickSpec {
                                                       "AppSecret": "Testing"]
                     
                     var success = true
-                    self.stub(
-                        { (request: URLRequest) -> Bool in
+                    
+                    let matcher = { (request: URLRequest) -> Bool in
                         for (key, value) in headers {
                             if request.allHTTPHeaderFields![key] != value {
                                 success = false
@@ -149,7 +148,9 @@ class NetworkRequestTests: QuickSpec {
                             }
                         }
                         return true
-                    }, json(object))
+                    }
+                    
+                    self.stub(matcher , json(object))
                     
                     
                     networkService.request(URL(string: "http://www.google.com")!, method: .get, parameters: nil, headers: headers, completion: { (result) in
