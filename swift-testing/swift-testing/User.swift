@@ -8,8 +8,6 @@
 
 import Foundation
 
-public typealias JsonObject = [String: Any]
-
 protocol JsonObjectParseable {
     init?(json: JsonObject)
 }

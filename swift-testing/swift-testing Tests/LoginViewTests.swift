@@ -23,7 +23,6 @@ class LoginViewTests: QuickSpec {
             beforeEach {
                 view = LoginView()
                 view.translatesAutoresizingMaskIntoConstraints = false
-                view.layoutIfNeeded()
             }
             
             it("should have a cool layout") {

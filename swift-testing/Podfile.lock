@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.4.0)
   - Cartography (1.0.1)
   - FBSnapshotTestCase (2.1.4):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
@@ -11,6 +12,13 @@ PODS:
     - KIF (~> 3.0)
     - Quick (~> 1.0)
   - KIF/Core (3.5.1)
+  - Mockingjay (2.0.0):
+    - Mockingjay/Core (= 2.0.0)
+    - Mockingjay/XCTest (= 2.0.0)
+  - Mockingjay/Core (2.0.0):
+    - URITemplate (~> 2.0)
+  - Mockingjay/XCTest (2.0.0):
+    - Mockingjay/Core
   - Nimble (6.0.1)
   - Nimble-Snapshots (4.4.0):
     - Nimble-Snapshots/Core (= 4.4.0)
@@ -19,24 +27,30 @@ PODS:
     - Nimble
     - Quick
   - Quick (1.1.0)
+  - URITemplate (2.0.0)
 
 DEPENDENCIES:
+  - Alamofire
   - Cartography
   - KIF
   - KIF-Quick
+  - Mockingjay
   - Nimble
   - Nimble-Snapshots
   - Quick
 
 SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   Cartography: c1460e99395b824d9d75360b0382faeb0b33dcd7
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   KIF: 082eb65279e51c3092923802849eb796a04982ab
   KIF-Quick: da968bbfad615fd96c0d5eb4d8fd484ecdc26814
+  Mockingjay: 7122a3fc0597aa63438e4cd9b71b7bc8aac05b87
   Nimble: 1527fd1bd2b4cf0636251a36bc8ab37e81da8347
   Nimble-Snapshots: e743439f26c2fa99d8f7e0d7c01c99bcb40aa6f2
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
+  URITemplate: a5acb3f76c6a2338116fde88b658d83f91bbac45
 
-PODFILE CHECKSUM: b9230a3ba8e7fa5784b497f2f2188c3c8320c436
+PODFILE CHECKSUM: fd69144ec6850bd39c96a95eb04582c9bdb05c13
 
 COCOAPODS: 1.2.0

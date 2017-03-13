@@ -24,7 +24,6 @@ class LoginViewXibTests: QuickSpec {
                 view = Bundle.main.loadNibNamed("LoginViewXib",
                                                 owner: nil,
                                                 options: nil)?.first as! LoginViewXib
-                view.layoutIfNeeded()
             }
             
             it("should have a cool layout") {

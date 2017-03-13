@@ -6,11 +6,13 @@ target 'swift-testing' do
   use_frameworks!
   
   pod 'Cartography'
+  pod 'Alamofire'
 
   target 'swift-testing Tests' do
     pod 'Nimble'
     pod 'Quick'
     pod 'Nimble-Snapshots'
+    pod 'Mockingjay'
     
     pod 'KIF'
     pod 'KIF-Quick'
