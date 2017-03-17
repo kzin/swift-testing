@@ -11,9 +11,9 @@
 class AuthenticationManagerMock : AuthenticationManager {
     
     var authenticateWasCalled = false
-    var result: Result<JsonObject>?
+    var result: Result<JsonObjectResponse<User>>?
     
-    func authenticate(username: String, password: String, completion: @escaping (Result<JsonObject>) -> Void) {
+    func authenticate(username: String, password: String, completion: @escaping (Result<JsonObjectResponse<User>>) -> Void) {
         
         if let result = result {
             completion(result)

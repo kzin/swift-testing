@@ -11,6 +11,11 @@ import Alamofire
 
 typealias JsonObject = [String: Any]
 
+enum Result<T> {
+    case success(T)
+    case error
+}
+
 enum Json {
     case object(_: JsonObject)
     case array(_: [JsonObject])

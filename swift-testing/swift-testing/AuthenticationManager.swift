@@ -8,23 +8,20 @@
 
 import Foundation
 
-enum Result<T> {
-    case success(T)
-    case error
-}
-
 protocol AuthenticationManager {
     func authenticate(username: String,
                       password: String,
-                      completion:@escaping (Result<JsonObject>) -> Void)
+                      completion:@escaping (Result<JsonObjectResponse<User>>) -> Void)
 }
 
 class RealAuthenticationManager: AuthenticationManager {
     func authenticate(username: String,
                       password: String,
-                      completion:@escaping (Result<JsonObject>) -> Void){
+                      completion:@escaping (Result<JsonObjectResponse<User>>) -> Void){
         if username == "username" && password == "password" {
-            completion(.success(JSON.user()))
+            let json = Json(json: JSON.user())
+            let response: JsonObjectResponse<User> = JsonObjectResponse<User>(json: json!)
+            completion(.success(response))
         } else {
             completion(.error)
         }

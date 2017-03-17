@@ -45,6 +45,10 @@ class UserTests: QuickSpec {
                 expect(user.username) == "username"
                 expect(user.email) == "user@mail.com"
                 expect(user.age) == 26
+                expect(user.access.profile) == true
+                expect(user.access.timeline) == true
+                expect(user.access.friends) == true
+                expect(user.access.dashboard) == true
             }
             
             it("should not parse for missing username") {

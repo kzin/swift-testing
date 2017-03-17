@@ -12,7 +12,7 @@ protocol JsonObjectParseable {
     init?(json: JsonObject)
 }
 
-struct User: JsonObjectParseable {
+struct User: JsonObjectParseable{
     
     let username: String
     let email: String

@@ -55,8 +55,8 @@ class LoginViewController: UIViewController {
         loginView.tapLoginButton = { username, password in
             self.authenticationManager.authenticate(username: username, password: password, completion: { (result) in
                 switch result {
-                case .success(_):
-                    break
+                case .success(let user):
+                    print(user)
                 case .error:
                     break
                 }
