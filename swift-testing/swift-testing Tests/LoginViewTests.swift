@@ -14,6 +14,8 @@ import Nimble_Snapshots
 
 class LoginViewTests: QuickSpec {
     
+    var superView: UIView!
+    
     override func spec() {
         
         describe("LoginView") {
@@ -21,14 +23,16 @@ class LoginViewTests: QuickSpec {
             var view: LoginView!
             
             beforeEach {
+                self.superView = UIView()
                 view = LoginView()
                 view.translatesAutoresizingMaskIntoConstraints = false
+                self.superView.addSubview(view)
             }
             
             it("should have a cool layout") {
                 expect(view) == snapshot()
             }
-            
+
             it("should hide loginButton if user set username only") {
                 view.userNameTextField.setTextAndSendEvent("username")
                 
