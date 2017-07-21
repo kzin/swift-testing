@@ -13,12 +13,23 @@ class LoginView: UIView {
     
     var tapLoginButton: ((_ username: String, _ password: String) -> ())?
     
+    let textLabel = { () -> UILabel in
+        let label = UILabel()
+        label.text = "Formulário de login"
+        label.font = UIFont.systemFont(ofSize: 15.0)
+        label.isHidden = false
+        return label
+    }()
+    
     let userNameTextField = { () -> UITextField in
         let textField = UITextField()
         textField.placeholder = "Username"
         textField.accessibilityLabel = "Username"
+        textField.borderStyle = .roundedRect
+        textField.font = UIFont.systemFont(ofSize: 15.0)
         textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         textField.autocapitalizationType = .none
+        textField.isHidden = false
         return textField
     }()
     
@@ -26,18 +37,22 @@ class LoginView: UIView {
         let textField = UITextField()
         textField.placeholder = "Password"
         textField.accessibilityLabel = "Password"
+        textField.font = UIFont.systemFont(ofSize: 15.0)
         textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         textField.autocapitalizationType = .none
+        textField.borderStyle = .roundedRect
         textField.isSecureTextEntry = true
+        textField.isHidden = false
         return textField
     }()
     
     let loginButton = { () -> UIButton in
         let button = UIButton()
         button.accessibilityLabel = "Login"
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 15.0)
         button.setTitle("Login", for: .normal)
         button.setTitleColor(.gray, for: .normal)
-        button.isHidden = true
+        button.isHidden = false
         return button
     }()
     
@@ -57,6 +72,7 @@ class LoginView: UIView {
     }
     
     func buildViewHierarchy() {
+        addSubview(textLabel)
         addSubview(userNameTextField)
         addSubview(passwordTextField)
         addSubview(loginButton)
@@ -67,13 +83,17 @@ class LoginView: UIView {
         let verticalMargin: CGFloat = 16.0
         let horizontalMargin: CGFloat = 8.0
         
-        constrain(self, userNameTextField, passwordTextField, loginButton) { view, username, password, login in
+        constrain(self, textLabel, userNameTextField, passwordTextField, loginButton) { view, label, username, password, login in
             
-            username.top == view.top + verticalMargin
-            username.left == view.left + horizontalMargin
-            username.right == view.right - horizontalMargin
+            label.top == view.top + verticalMargin
+            label.left == view.left + horizontalMargin
+            label.right == view.right - horizontalMargin
             
-            password.top == username.bottom + verticalMargin
+            username.top == label.bottom + verticalMargin
+            username.left == label.left
+            username.right == label.right
+            
+            password.top == username.baseline + 21.0
             password.left == username.left
             password.right == username.right
             
@@ -86,6 +106,7 @@ class LoginView: UIView {
     
     func setup() {
         self.loginButton.addTarget(self, action: #selector(tapLogin), for: .touchUpInside)
+        self.backgroundColor = .white
     }
     
     func tapLogin() {

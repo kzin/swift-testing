@@ -96,6 +96,7 @@ typedef union {
 
   BOOL imageEqual = YES;
 
+    tolerance = 1.0;
   // Do a fast compare if we can
   if (tolerance == 0) {
     imageEqual = (memcmp(referenceImagePixels, imagePixels, referenceImageSizeBytes) == 0);
@@ -111,13 +112,27 @@ typedef union {
       // If this pixel is different, increment the pixel diff count and see
       // if we have hit our limit.
       if (p1->raw != p2->raw) {
-        numDiffPixels ++;
-
-        CGFloat percent = (CGFloat)numDiffPixels / pixelCount;
-        if (percent > tolerance) {
-          imageEqual = NO;
-          break;
-        }
+          
+          int redDiff = (unsigned char)p1->pixels.red - (unsigned char)p2->pixels.red;
+          int greenDiff = (unsigned char)p1->pixels.green - (unsigned char)p2->pixels.green;
+          int blueDiff = (unsigned char)p1->pixels.blue - (unsigned char)p2->pixels.blue;
+          int alphaDiff = (unsigned char)p1->pixels.alpha - (unsigned char)p2->pixels.alpha;
+          
+          if(abs(redDiff) > tolerance ||
+             abs(greenDiff) > tolerance ||
+             abs(blueDiff) > tolerance ||
+             abs(alphaDiff) > tolerance) {
+              imageEqual = NO;
+              break;
+          }
+          
+//        numDiffPixels ++;
+//
+//        CGFloat percent = (CGFloat)numDiffPixels / pixelCount;
+//        if (percent > tolerance) {
+//          imageEqual = NO;
+//          break;
+//        }
       }
 
       p1++;

@@ -14,21 +14,21 @@ class UserCell: UITableViewCell {
     let usernameLabel = { () -> UILabel in
         let label = UILabel()
         label.textColor = .blue
-        label.font = UIFont.systemFont(ofSize: 10.0)
+        label.font = UIFont.init(name: "SF UI Display", size: 16.0)
         return label
     }()
     
     let emailLabel = { () -> UILabel in
         let label = UILabel()
         label.textColor = .white
-        label.font = UIFont.systemFont(ofSize: 14.0)
+        label.font = UIFont.init(name: "SF UI Display", size: 16.0)
         return label
     }()
     
     let ageLabel = { () -> UILabel in
         let label = UILabel()
         label.textColor = .blue
-        label.font = UIFont.systemFont(ofSize: 10.0)
+        label.font = UIFont.init(name: "SF UI Display", size: 16.0)
         return label
     }()
     

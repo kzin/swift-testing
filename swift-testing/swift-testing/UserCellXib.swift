@@ -6,4 +6,14 @@
 //  Copyright © 2017 Rodrigo Cavalcante. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class UserCellXib: UITableViewCell {
+    
+    @IBOutlet weak var username: UILabel!
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.contentView.frame = self.bounds
+    }
+}

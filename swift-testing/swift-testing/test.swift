@@ -1,9 +1,28 @@
-//
-//  test.swift
-//  swift-testing
-//
-//  Created by Rodrigo Cavalcante on 21/07/17.
-//  Copyright © 2017 Rodrigo Cavalcante. All rights reserved.
-//
+import UIKit
 
-import Foundation
+class MyDelegateDatasource2: NSObject, UITableViewDataSource {
+    
+    var data: [String]?
+    
+    //MARK: Datasource
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if let count = data?.count {
+            return count
+        }
+        
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        cell.textLabel?.text = data?[indexPath.row]
+        
+        return cell
+    }
+}
